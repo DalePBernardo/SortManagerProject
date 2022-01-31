@@ -9,6 +9,6 @@ public class Main {
         x = bs.bubbleSort(x);
 
         for(int num : x)
-            System.out.print(num + ", ");
+            System.out.print(num + " ");
     }
 }
