@@ -1,30 +1,30 @@
 package com.spartaglobal.sortmanager;
 
-public class MergeSort {
+public class MergeSort implements Sorter {
 
-    public static int[] mergeSort(int[] intList, int n){
-        if (n <= 0 || intList.length <= 0)    // Return null if array is empty of given n is negative
+    public int[] sort(int[] intList, int size){
+        if (size <= 0 || intList.length <= 0)    // Return null if array is empty of given n is negative
             return null;
 
-        if (n < 2 || intList.length < 2)    // Return the list back if it only contains 1 or 2 elements
+        if (size < 2 || intList.length < 2)    // Return the list back if it only contains 1 or 2 elements
             return intList;
 
-        int mid = n / 2;    // Find the middle point of the current array for this iteration
+        int mid = size / 2;    // Find the middle point of the current array for this iteration
         int[] left = new int[mid];    // Split the array into half
-        int[] right = new int[n - mid];
+        int[] right = new int[size - mid];
 
         for(int i = 0; i < mid; i++){    // Go through the original array and everything on left side add it to left array
             left[i] = intList[i];
         }
 
-        for(int i = mid; i < n; i++){    // Like wise with right side
+        for(int i = mid; i < size; i++){    // Like wise with right side
             right[i - mid] = intList[i];
         }
 
-        mergeSort(left, mid);    // Recursion through the array to multiple single element arrays
-        mergeSort(right, n - mid);    // Both on left and right side
+        sort(left, mid);    // Recursion through the array to multiple single element arrays
+        sort(right, size - mid);    // Both on left and right side
 
-        return merge(intList, left, right, mid, n - mid);    // Return the merged array after calling the merge method
+        return merge(intList, left, right, mid, size - mid);    // Return the merged array after calling the merge method
     }
 
     public static int[] merge(int[] intList, int[] left, int[] right, int leftPointer, int rightPointer){
