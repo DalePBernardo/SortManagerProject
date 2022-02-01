@@ -11,7 +11,7 @@ public class SorterView {
             System.out.print(num + " ");
         }
 
-        int[] sortedArray = sorter.sort(originalArray, originalArray.length);    // Sorts the array
+        int[] sortedArray = sorter.sort(originalArray);    // Sorts the array
 
         System.out.print("\nSorted Array: ");
 

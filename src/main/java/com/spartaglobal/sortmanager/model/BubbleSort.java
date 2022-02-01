@@ -2,8 +2,8 @@ package com.spartaglobal.sortmanager.model;
 
 public class BubbleSort implements Sorter {
 
-    public int[] sort(int[] intArray, int size) {
-        if (intArray.length == 0 || size <= 0)    // Returns null if the array is empty
+    public int[] sort(int[] intArray) {
+        if (intArray.length == 0)    // Returns null if the array is empty
             return null;
 
         for (int i = 0; i < intArray.length - 1; i++) {    // Go through the array element by element
