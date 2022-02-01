@@ -3,12 +3,12 @@ package com.spartaglobal.sortmanager;
 public class BubbleSort {
 
     public static int[] bubbleSort(int[] intArray) {
-        if (intArray.length == 0)
+        if (intArray.length == 0)    // Returns null if the array is empty
             return null;
 
-        for (int i = 0; i < intArray.length - 1; i++) {
-            for (int j = 0; j < intArray.length - i - 1; j++) {
-                if (intArray[j] > intArray[j + 1]) {
+        for (int i = 0; i < intArray.length - 1; i++) {    // Go through the array element by element
+            for (int j = 0; j < intArray.length - i - 1; j++) {    // Compare it to its right each iteration
+                if (intArray[j] > intArray[j + 1]) {    // Swap if they are the other way around
                     int temp = intArray[j];
                     intArray[j] = intArray[j + 1];
                     intArray[j + 1] = temp;

@@ -17,7 +17,7 @@ public class MergeSortTest {
 
     @Test
     @DisplayName("Given an array of x numbers, Bubble sort is expected to return the array sorted")
-    public void givenArrayOfxDifferentNumbers_BubbleSort_ReturnsTheArraySorted(){
+    public void givenArrayOfPositiveNumbers_BubbleSort_ReturnsTheArraySorted(){
         int[] testInput = {23, 12, 4, 93, 74};
         assertArrayEquals(new int[]{4,12,23,74,93}, sut.mergeSort(testInput, 5));
     }
