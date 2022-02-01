@@ -1,6 +1,6 @@
-package com.spartaglobal.sortmanagertest.view;
+package com.spartaglobal.sortmanager.view;
 
-import com.spartaglobal.sortmanagertest.model.Sorter;
+import com.spartaglobal.sortmanager.model.Sorter;
 
 import java.util.Scanner;
 
