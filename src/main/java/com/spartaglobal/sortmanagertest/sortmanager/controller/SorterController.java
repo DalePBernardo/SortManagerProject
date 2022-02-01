@@ -1,9 +1,9 @@
-package com.spartaglobal.sortmanager.controller;
+package com.spartaglobal.sortmanagertest.sortmanager.controller;
 
-import com.spartaglobal.sortmanager.model.BubbleSortFactory;
-import com.spartaglobal.sortmanager.model.MergeSortFactory;
-import com.spartaglobal.sortmanager.model.Sorter;
-import com.spartaglobal.sortmanager.model.SorterFactory;
+import com.spartaglobal.sortmanagertest.sortmanager.model.BubbleSortFactory;
+import com.spartaglobal.sortmanagertest.sortmanager.model.MergeSortFactory;
+import com.spartaglobal.sortmanagertest.sortmanager.model.Sorter;
+import com.spartaglobal.sortmanagertest.sortmanager.model.SorterFactory;
 
 import java.util.Random;
 

@@ -1,7 +1,7 @@
-package com.spartaglobal.sortmanager.view;
+package com.spartaglobal.sortmanagertest.sortmanager.view;
 
-import com.spartaglobal.sortmanager.controller.SorterController;
-import com.spartaglobal.sortmanager.model.Sorter;
+import com.spartaglobal.sortmanagertest.sortmanager.controller.SorterController;
+import com.spartaglobal.sortmanagertest.sortmanager.model.Sorter;
 
 public class FactoryMain {
     public static void main(String[] args) {
