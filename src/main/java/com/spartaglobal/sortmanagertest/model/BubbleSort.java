@@ -1,4 +1,4 @@
-package com.spartaglobal.sortmanagertest.sortmanager.model;
+package com.spartaglobal.sortmanagertest.model;
 
 public class BubbleSort implements Sorter {
 

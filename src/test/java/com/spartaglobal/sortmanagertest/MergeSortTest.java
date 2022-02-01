@@ -1,6 +1,6 @@
 package com.spartaglobal.sortmanagertest;
 
-import com.spartaglobal.sortmanagertest.sortmanager.model.MergeSort;
+import com.spartaglobal.sortmanagertest.model.MergeSort;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
