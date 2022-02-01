@@ -1,23 +1,24 @@
-package com.spartaglobal.sortmanagertest;
+package com.spartaglobal.sortmanager.sortmanagertest;
 
-import com.spartaglobal.sortmanager.MergeSort;
+import com.spartaglobal.sortmanager.model.BubbleSort;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class MergeSortTest {
-    private static MergeSort sut;
+public class BubbleSortTest {
+
+    private static BubbleSort sut;
 
     @BeforeAll
     static void setUp(){
-        sut = new MergeSort();
+        sut = new BubbleSort();
     }
 
     @Test
     @DisplayName("Given an array of x numbers, Bubble sort is expected to return the array sorted")
-    public void givenArrayOfPositiveNumbers_BubbleSort_ReturnsTheArraySorted(){
+    public void givenArrayOfxDifferentNumbers_BubbleSort_ReturnsTheArraySorted(){
         int[] testInput = {23, 12, 4, 93, 74};
         assertArrayEquals(new int[]{4,12,23,74,93}, sut.sort(testInput, 5));
     }
