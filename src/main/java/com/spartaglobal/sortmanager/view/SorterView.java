@@ -1,11 +1,16 @@
 package com.spartaglobal.sortmanager.view;
 
 import com.spartaglobal.sortmanager.model.Sorter;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SorterView {
+
+    private static Logger logger = LogManager.getLogger("Sort Controller Logger");
+
     public void displayResult(int[] originalArray, Sorter sorter){
 
         System.out.println("\nYou have chosen: " + sorter.getClass().getSimpleName());
@@ -41,6 +46,8 @@ public class SorterView {
         try{
             return promptUserIntInput("\nPlease enter the size of the desired array: ");
         } catch (InputMismatchException ime) {
+            logger.info("User entered an invalid input for choosing the size of the array");
+
             System.out.print("\nNumber entered not recognised, try again");
             return getSize();
         }
@@ -50,6 +57,7 @@ public class SorterView {
         try{
             return promptUserIntInput("\nEnter a number for position " + (index + 1) + ": ");
         } catch (InputMismatchException ime){
+            logger.info("User entered an invalid input for inputting elements in the array");
             System.out.print("\nNumber entered not recognised, try again");
             return getElement(index);
         }
