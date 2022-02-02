@@ -9,6 +9,6 @@ public class FactoryMain {
         String desiredSorter = view.getDesiredSorter();    // Get the desired sort method the user wants
         SorterController controller = new SorterController();
         Sorter sorter = controller.getSorter(desiredSorter);
-        view.displayResult(controller.initiateArray(sorter), sorter);    // Display the unsorted and sorted arrays
+        view.displayResult(controller.initiateArray(sorter, view.getRandomOrInsert()), sorter);    // Display the unsorted and sorted arrays
     }
 }
