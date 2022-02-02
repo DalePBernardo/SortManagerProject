@@ -1,4 +1,6 @@
-package com.spartaglobal.sortmanager.model;
+package com.spartaglobal.sortmanager.sortfactory;
+
+import com.spartaglobal.sortmanager.model.MergeSort;
 
 public class MergeSortFactory extends SorterFactory {
     @Override

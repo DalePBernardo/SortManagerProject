@@ -1,5 +1,10 @@
 package com.spartaglobal.sortmanager.model;
 
+import com.spartaglobal.sortmanager.controller.SorterController;
+import com.spartaglobal.sortmanager.sortfactory.Sorter;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class BubbleSort implements Sorter {
 
     public int[] sort(int[] intArray) {

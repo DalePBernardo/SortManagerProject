@@ -1,5 +1,9 @@
 package com.spartaglobal.sortmanager.model;
 
+import com.spartaglobal.sortmanager.sortfactory.Sorter;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class MergeSort implements Sorter {
 
     public int[] sort(int[] intArray){
@@ -46,7 +50,6 @@ public class MergeSort implements Sorter {
         while (j < rightPointer){    // Merge the leftovers from the right side
             intArray[k++] = right[j++];
         }
-
         return intArray;
     }
 }

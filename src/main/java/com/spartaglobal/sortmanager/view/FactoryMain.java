@@ -1,16 +1,16 @@
 package com.spartaglobal.sortmanager.view;
 
 import com.spartaglobal.sortmanager.controller.SorterController;
-import com.spartaglobal.sortmanager.model.Sorter;
-import org.apache.logging.log4j.Level;
+import com.spartaglobal.sortmanager.sortfactory.Sorter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class FactoryMain {
-    private static Logger logger = LogManager.getLogger("Sort Controller Logger");
+    private static Logger logger = LogManager.getLogger(FactoryMain.class.getSimpleName());
 
     public static void main(String[] args) {
         SorterView view = new SorterView();
+        view.displayAppTitle();
         String desiredSorter = view.getDesiredSorter();    // Get the desired sort method the user wants
         SorterController controller = new SorterController();
         Sorter sorter = controller.getSorter(desiredSorter);

@@ -1,9 +1,9 @@
 package com.spartaglobal.sortmanager.controller;
 
-import com.spartaglobal.sortmanager.model.BubbleSortFactory;
-import com.spartaglobal.sortmanager.model.MergeSortFactory;
-import com.spartaglobal.sortmanager.model.Sorter;
-import com.spartaglobal.sortmanager.model.SorterFactory;
+import com.spartaglobal.sortmanager.sortfactory.BubbleSortFactory;
+import com.spartaglobal.sortmanager.sortfactory.MergeSortFactory;
+import com.spartaglobal.sortmanager.sortfactory.Sorter;
+import com.spartaglobal.sortmanager.sortfactory.SorterFactory;
 import com.spartaglobal.sortmanager.view.SorterView;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.Random;
 
 public class SorterController {
-    private static Logger logger = LogManager.getLogger("Sort Controller Logger");
+    private static Logger logger = LogManager.getLogger(SorterController.class.getSimpleName());
 
     public static int[] initiateArray(Sorter sorter, String randomOrInsert){
 
@@ -42,7 +42,7 @@ public class SorterController {
 
             return generatedArray;
         } else if (randomOrInsert.toLowerCase().equals("exit")){
-            closeApplication("Closing the application...");
+            closeApplication("\nClosing the application...");
         }
 
         logger.info("User entered an invalid input when choosing randomise or insert the array");
@@ -64,7 +64,7 @@ public class SorterController {
                 sf = new MergeSortFactory();
                 break;
             case "exit":
-                closeApplication("Closing the application...");
+                closeApplication("\nClosing the application...");
             default:
                 logger.info("User entered an invalid input when choosing the sorter");
                 sf = null;

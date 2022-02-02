@@ -1,6 +1,6 @@
 package com.spartaglobal.sortmanager.view;
 
-import com.spartaglobal.sortmanager.model.Sorter;
+import com.spartaglobal.sortmanager.sortfactory.Sorter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class SorterView {
 
-    private static Logger logger = LogManager.getLogger("Sort Controller Logger");
+    private static Logger logger = LogManager.getLogger(SorterView.class.getSimpleName());
 
     public void displayResult(int[] originalArray, Sorter sorter){
 
@@ -19,8 +19,14 @@ public class SorterView {
         for (int num : originalArray){
             System.out.print(num + " ");
         }
+        long startTime = System.nanoTime();
 
         int[] sortedArray = sorter.sort(originalArray);    // Sorts the array
+
+        long stopTime = System.nanoTime();
+        long executionTime = stopTime - startTime;
+        logger.info(sorter.getClass().getSimpleName() + " took " + executionTime + " nano seconds to execute");
+
         System.out.print("\nSorted Array: ");
 
         for (int num : sortedArray){    // Prints the sorted array
@@ -42,11 +48,15 @@ public class SorterView {
                 "\n|------------Exit------------|\nEnter your choice: ");
     }
 
+    public void displayAppTitle(){
+        System.out.println("\n|====== SortingManager ======|");
+    }
+
     public int getSize(){
         try{
             return promptUserIntInput("\nPlease enter the size of the desired array: ");
         } catch (InputMismatchException ime) {
-            logger.info("User entered an invalid input for choosing the size of the array");
+            logger.warn("User entered an invalid input for choosing the size of the array");
 
             System.out.print("\nNumber entered not recognised, try again");
             return getSize();
@@ -57,7 +67,7 @@ public class SorterView {
         try{
             return promptUserIntInput("\nEnter a number for position " + (index + 1) + ": ");
         } catch (InputMismatchException ime){
-            logger.info("User entered an invalid input for inputting elements in the array");
+            logger.warn("User entered an invalid input for inputting elements in the array");
             System.out.print("\nNumber entered not recognised, try again");
             return getElement(index);
         }
