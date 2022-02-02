@@ -43,4 +43,11 @@ public class BubbleSortTest {
         int[] testInput = {0, 0, 0, 0, 0};
         assertArrayEquals(new int[]{0, 0, 0, 0, 0}, sut.sort(testInput));
     }
+
+    @Test
+    @DisplayName("Given an array which is null, Bubble sort is expected to throw a NullPointerException")
+    public void givenNullArray_BubbleSort_ReturnsANullPointerException(){
+        int[] testInput = null;
+        NullPointerException nExp = assertThrows(NullPointerException.class, () -> sut.sort(testInput), "No exception thrown");
+    }
 }

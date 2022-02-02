@@ -16,7 +16,7 @@ public class SorterController {
 
         if (randomOrInsert.toLowerCase().equals("r") || randomOrInsert.toLowerCase().equals("random")){
             Random random = new Random();
-            int[] randomIntArray = new int[random.nextInt(0, 15)];    // Randomised size array
+            int[] randomIntArray = new int[random.nextInt(10, 25)];    // Randomised size array
             int size = randomIntArray.length;
 
             for (int i = 0; i < size; i++){
@@ -39,7 +39,7 @@ public class SorterController {
         return initiateArray(sorter, inputAttempt);
     }
 
-    public static Sorter getSorter(String sorterType){
+    public static Sorter getSorter (String sorterType) {
         SorterFactory sf = null;
         SorterView sv = new SorterView();
 
