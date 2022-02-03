@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class SorterView {
 
-    private static Logger logger = LogManager.getLogger(SorterView.class.getSimpleName());
+    private static Logger logger = LogManager.getLogger(SorterView.class.getSimpleName());    // Logger for user activities
 
     public void displayResult(int[] originalArray, Sorter sorter){
 
@@ -35,35 +35,34 @@ public class SorterView {
         System.out.print("\n");
     }
 
-    public String getRandomOrInsert(){
+    public String getRandomOrInsert(){    // Prompts the user to enter random or insert an array
         return promptUserInput("\nHere are your generating array options:\n" +
                 "|---------Random(r)----------|\n|---------Insert(i)----------|" +
                 "\n|------------Exit------------|\nEnter your choice: ");
     }
 
-    public String getDesiredSorter(){
+    public String getDesiredSorter(){    // Prompts user to enter which sorter they want
         return promptUserInput("\nHere are your sorting options:\n" +
                 "|---------BubbleSort---------|\n|---------MergeSort----------|" +
                 "\n|------BinarySearchTree------|" +
                 "\n|------------Exit------------|\nEnter your choice: ");
     }
 
-    public void displayAppTitle(){
+    public void displayAppTitle(){    // Displays title
         System.out.println("\n|====== SortingManager ======|");
     }
 
-    public int getSize(){
-        try{
+    public int getSize(){    // Prompts user to enter the size of the array
+        try{    // A try catch exception handling just in case user inputs symbols, strings, etc.
             return promptUserIntInput("\nPlease enter the size of the desired array: ");
         } catch (InputMismatchException ime) {
             logger.warn("User entered an invalid input for choosing the size of the array");
-
             System.out.print("\nNumber entered not recognised, try again");
             return getSize();
         }
     }
 
-    public int getElement(int index){
+    public int getElement(int index){    // Prompts user to enter the element of the array in position index
         try{
             return promptUserIntInput("\nEnter a number for position " + (index + 1) + ": ");
         } catch (InputMismatchException ime){

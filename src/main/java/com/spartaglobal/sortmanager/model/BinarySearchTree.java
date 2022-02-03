@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class BinarySearchTree implements Sorter {
 
-    class Node {
+    class Node {    // Node class for each element in the Binary tree
         int value;
         Node left, right;
 
@@ -24,23 +24,23 @@ public class BinarySearchTree implements Sorter {
     }
 
     public int[] sort(int[] intArray) {
-        if (intArray.length == 0)
+        if (intArray.length == 0)    // Return null if the array is empty
             return null;
 
         ArrayList<Integer> result = new ArrayList<>();
 
-        root = new Node(intArray[0]);
+        root = new Node(intArray[0]);    // Makes the first element of the array to be the root value
 
-        for (int i = 1; i < intArray.length; i++){
+        for (int i = 1; i < intArray.length; i++){    // Add the rest of the elements in the array to the tree
             addToTree(root, intArray[i]);
         }
 
-        inOrderTraversal(root, result);
+        inOrderTraversal(root, result);    // Traverse through the Binary tree using in-order traversal5
 
         int[] outputArray = new int[result.size()];
 
         int i = 0;
-        for (int num : result){
+        for (int num : result){    // Transfer the values to the int array
             outputArray[i] = num;
             i++;
         }
@@ -49,6 +49,7 @@ public class BinarySearchTree implements Sorter {
     }
 
     public Node addToTree(Node current, int value){
+        // Traverses through the array in-order and forming the tree
         if (current == null)
             return new Node(value);
 
@@ -63,6 +64,7 @@ public class BinarySearchTree implements Sorter {
     }
 
     public void inOrderTraversal(Node node, ArrayList<Integer> result){
+        // Traversing through the array, adding each node value to the array list
         if (node != null){
             inOrderTraversal(node.left, result);
             result.add(node.value);

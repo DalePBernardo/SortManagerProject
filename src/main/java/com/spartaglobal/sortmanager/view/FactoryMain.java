@@ -1,13 +1,12 @@
 package com.spartaglobal.sortmanager.view;
 
 import com.spartaglobal.sortmanager.controller.SorterController;
-import com.spartaglobal.sortmanager.model.BinarySearchTree;
 import com.spartaglobal.sortmanager.model.Sorter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class FactoryMain {
-    private static Logger logger = LogManager.getLogger(FactoryMain.class.getSimpleName());
+    private static Logger logger = LogManager.getLogger(FactoryMain.class.getSimpleName());    // Logger for user activities
 
     public static void main(String[] args) {
         SorterView view = new SorterView();
