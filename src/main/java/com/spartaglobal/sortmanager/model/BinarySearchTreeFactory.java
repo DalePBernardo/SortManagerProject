@@ -1,8 +1,8 @@
 package com.spartaglobal.sortmanager.model;
 
-public class BinaryTreeSortFactory extends SorterFactory {
+public class BinarySearchTreeFactory extends SorterFactory {
     @Override
     public Sorter getInstance() {
-        return new BinaryTreeSort();
+        return new BinarySearchTree();
     }
 }

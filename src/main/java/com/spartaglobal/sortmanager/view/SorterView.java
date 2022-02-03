@@ -44,6 +44,7 @@ public class SorterView {
     public String getDesiredSorter(){
         return promptUserInput("\nHere are your sorting options:\n" +
                 "|---------BubbleSort---------|\n|---------MergeSort----------|" +
+                "\n|------BinarySearchTree------|" +
                 "\n|------------Exit------------|\nEnter your choice: ");
     }
 

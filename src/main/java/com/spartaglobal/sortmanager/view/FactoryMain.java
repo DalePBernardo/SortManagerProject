@@ -1,7 +1,7 @@
 package com.spartaglobal.sortmanager.view;
 
 import com.spartaglobal.sortmanager.controller.SorterController;
-import com.spartaglobal.sortmanager.model.BinaryTreeSort;
+import com.spartaglobal.sortmanager.model.BinarySearchTree;
 import com.spartaglobal.sortmanager.model.Sorter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

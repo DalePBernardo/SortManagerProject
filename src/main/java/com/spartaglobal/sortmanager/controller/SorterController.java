@@ -1,9 +1,6 @@
 package com.spartaglobal.sortmanager.controller;
 
-import com.spartaglobal.sortmanager.model.BubbleSortFactory;
-import com.spartaglobal.sortmanager.model.MergeSortFactory;
-import com.spartaglobal.sortmanager.model.Sorter;
-import com.spartaglobal.sortmanager.model.SorterFactory;
+import com.spartaglobal.sortmanager.model.*;
 import com.spartaglobal.sortmanager.view.SorterView;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -55,13 +52,17 @@ public class SorterController {
         SorterView sv = new SorterView();
 
         switch (sorterType.toLowerCase()) {    // Check which one the user has entered
-            case "bubblesort":
+            case "bubblesort", "bs":
                 logger.info("User chose Bubble sort to sort the array");
                 sf = new BubbleSortFactory();
                 break;
-            case "mergesort":
+            case "mergesort", "ms":
                 logger.info("User chose Merge sort to sort the array");
                 sf = new MergeSortFactory();
+                break;
+            case "binarysearchtree", "bst":
+                logger.info("User chose Binary tree sort to sort the array");
+                sf = new BinarySearchTreeFactory();
                 break;
             case "exit":
                 closeApplication("\nClosing the application...");
