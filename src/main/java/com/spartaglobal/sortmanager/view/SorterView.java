@@ -1,6 +1,6 @@
 package com.spartaglobal.sortmanager.view;
 
-import com.spartaglobal.sortmanager.sortfactory.Sorter;
+import com.spartaglobal.sortmanager.model.Sorter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,8 +24,7 @@ public class SorterView {
         int[] sortedArray = sorter.sort(originalArray);    // Sorts the array
 
         long stopTime = System.nanoTime();
-        long executionTime = stopTime - startTime;
-        logger.info(sorter.getClass().getSimpleName() + " took " + executionTime + " nano seconds to execute");
+        logger.info(sorter.getClass().getSimpleName() + " took " + (stopTime - startTime) + " nano seconds to execute");
 
         System.out.print("\nSorted Array: ");
 

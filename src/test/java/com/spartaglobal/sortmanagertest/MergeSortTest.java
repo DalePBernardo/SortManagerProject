@@ -50,4 +50,11 @@ public class MergeSortTest {
         int[] testInput = null;
         NullPointerException nExp = assertThrows(NullPointerException.class, () -> sut.sort(testInput), "No exception thrown");
     }
+
+    @Test
+    @DisplayName("Given an array of mixed negative and positive numbers, Merge sort is expected to return a the sorted array")
+    public void givenArrayOfMixedPositiveAndNegativeNumbers_MergeSort_ReturnsTheArraySorted(){
+        int[] testInput = {23, 9, -12, 43, -234, 124, 0};
+        assertArrayEquals(new int[]{-234, -12, 0, 9, 23, 43, 124}, sut.sort(testInput));
+    }
 }

@@ -1,4 +1,4 @@
-package com.spartaglobal.sortmanager.sortfactory;
+package com.spartaglobal.sortmanager.model;
 
 public interface Sorter {
     public int[] sort(int[] intList);
