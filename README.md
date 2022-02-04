@@ -63,6 +63,8 @@ Users can also exit the application by entering 'Exit'.
 > - [Phase 3 - Added logs of user activities in a log file](https://github.com/DalePBernardo/SortManagerProject/blob/main/src/main/java/com/spartaglobal/sortmanager/controller/SorterController.java)
 > - [Phase 4 - Algorithm time complexity calculation is added in the logs](https://github.com/DalePBernardo/SortManagerProject/blob/main/src/main/java/com/spartaglobal/sortmanager/view/SorterView.java)
 > - [Phase 5 - Implementation of Binary Search Tree with Test cases](https://github.com/DalePBernardo/SortManagerProject/blob/main/src/main/java/com/spartaglobal/sortmanager/model/BinarySearchTree.java)
+>> Note: For phase 5, the implementation of Binary Search Tree has an adaptor sorting method
+>> in order to follow the way the other two sorting methods are called.
 
 ## Testing and Outcome
 > For all of the sorting methods, I tested the following conditions:
