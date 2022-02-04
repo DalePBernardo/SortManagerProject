@@ -1,12 +1,12 @@
 # Sort Manager Project
 
 ## Table of Contents
-> - [Summary](##Summary)
-> - [Dependencies](##Dependencies)
-> - [How to Set up the Project](##How to set up the project)
-> - [How to Use the Project](##How to use the project)
-> - [Branches/Phases](##Branches/Phases)
-> - [Testing and Outcome](##Testing and Outcome)
+> - [Summary](#Summary)
+> - [Dependencies](#Dependencies)
+> - [How to Set up the Project](#How-to-set-up-the-project)
+> - [How to Use the Project](#How-to-use-the-project)
+> - [Branches/Phases](#Branches/Phases)
+> - [Testing and Outcome](#Testing-and-Outcome)
 
 ##Summary
 > A software which allows the user to choose between ***bubble sort,
