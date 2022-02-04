@@ -6,7 +6,7 @@
 > - [How to Set up the Project](#How-to-set-up-the-project)
 > - [How to Use the Project](#How-to-use-the-project)
 > - [Branches/Phases](#Branches/Phases)
-> - [Testing and Outcome](##Testing-and-Outcome)
+> - [Testing and Outcome](#Testing-and-Outcome)
 
 ## Summary
 > A software which allows the user to choose between ***bubble sort,
@@ -33,7 +33,7 @@ user activities are logged using the ***log4j2*** property.
     </dependencies>
 ```
 
-# How to set up the project
+## How to set up the project
 > Download the code as a ZIP file and extract it on a directory of your choice 
 and open that folder using the IDE of your choice.
 
@@ -52,7 +52,7 @@ and click the refresh button.
 
 ![refresh](https://cdn.discordapp.com/attachments/881969703017386034/938893844383141938/unknown.png)
 
-# How to use the project
+## How to use the project
 > 1. Run the 'FactoryMain.java' class
 > 2. Insert the desired sorter to sort the array:
 'BubbleSort' | 'BS' for Bubble sort, 
