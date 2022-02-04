@@ -5,7 +5,7 @@
 > - [Dependencies](#Dependencies)
 > - [How to Set up the Project](#How-to-set-up-the-project)
 > - [How to Use the Project](#How-to-use-the-project)
-> - [Branches/Phases](#Branches/Phases)
+> - [Branches and Phases](#Branches-and-Phases)
 > - [Testing and Outcome](#Testing-and-Outcome)
 
 ## Summary
@@ -66,7 +66,7 @@ and 'BinarySearchTree' | 'BST' for Binary search tree.
 Note: For all of the user inputs, the capitalisation of the letters does not matter.
 Users can also exit the application by entering 'Exit'.
 
-## Branches/Phases
+## Branches and Phases
 > - [Phase 1 - Implementation of bubble/merge sort with Test cases](https://github.com/DalePBernardo/SortManagerProject/tree/main/src/main/java/com/spartaglobal/sortmanager/model)
 > - [Phase 2 - Refactoring the project to follow the Design pattern of MVC and Factory](https://github.com/DalePBernardo/SortManagerProject/blob/main/src/main/java/com/spartaglobal/sortmanager/view/FactoryMain.java)
 > - [Phase 3 - Added logs of user activities in a log file](https://github.com/DalePBernardo/SortManagerProject/blob/main/src/main/java/com/spartaglobal/sortmanager/controller/SorterController.java)
