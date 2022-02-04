@@ -58,11 +58,11 @@ Note: For all of the user inputs, the capitalisation of the letters does not mat
 Users can also exit the application by entering 'Exit'.
 
 ## Branches/Phases
-> - Phase 1 - Implementation of bubble/merge sort with Test cases
-> - Phase 2 - Refactoring the project to follow the Design pattern of MVC and Factory
-> - Phase 3 - Added logs of user activities in a log file
-> - Phase 4 - Algorithm time complexity calculation is added in the logs
-> - Phase 5 - Implementation of Binary Search Tree with Test cases
+> - [Phase 1 - Implementation of bubble/merge sort with Test cases](https://github.com/DalePBernardo/SortManagerProject/tree/main/src/main/java/com/spartaglobal/sortmanager/model)
+> - [Phase 2 - Refactoring the project to follow the Design pattern of MVC and Factory](https://github.com/DalePBernardo/SortManagerProject/blob/main/src/main/java/com/spartaglobal/sortmanager/view/FactoryMain.java)
+> - [Phase 3 - Added logs of user activities in a log file](https://github.com/DalePBernardo/SortManagerProject/blob/main/src/main/java/com/spartaglobal/sortmanager/controller/SorterController.java)
+> - [Phase 4 - Algorithm time complexity calculation is added in the logs](https://github.com/DalePBernardo/SortManagerProject/blob/main/src/main/java/com/spartaglobal/sortmanager/controller/SorterController.java)
+> - [Phase 5 - Implementation of Binary Search Tree with Test cases](https://github.com/DalePBernardo/SortManagerProject/blob/main/src/main/java/com/spartaglobal/sortmanager/model/BinarySearchTree.java)
 
 ## Testing and Outcome
 > For all of the sorting methods, I tested the following conditions:
