@@ -1,4 +1,4 @@
-package com.spartaglobal.sortmanager.model;
+package com.dbernardo.sortmanager.model;
 
 import java.util.ArrayList;
 

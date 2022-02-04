@@ -1,6 +1,6 @@
-package com.spartaglobal.sortmanagertest;
+package com.dbernardo.sortmanagertest;
 
-import com.spartaglobal.sortmanager.model.BinarySearchTree;
+import com.dbernardo.sortmanager.model.BinarySearchTree;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

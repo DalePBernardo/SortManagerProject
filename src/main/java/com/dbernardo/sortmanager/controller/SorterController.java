@@ -1,7 +1,8 @@
-package com.spartaglobal.sortmanager.controller;
+package com.dbernardo.sortmanager.controller;
 
+import com.dbernardo.sortmanager.model.*;
 import com.spartaglobal.sortmanager.model.*;
-import com.spartaglobal.sortmanager.view.SorterView;
+import com.dbernardo.sortmanager.view.SorterView;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

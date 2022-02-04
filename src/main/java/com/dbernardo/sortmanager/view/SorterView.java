@@ -1,6 +1,6 @@
-package com.spartaglobal.sortmanager.view;
+package com.dbernardo.sortmanager.view;
 
-import com.spartaglobal.sortmanager.model.Sorter;
+import com.dbernardo.sortmanager.model.Sorter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

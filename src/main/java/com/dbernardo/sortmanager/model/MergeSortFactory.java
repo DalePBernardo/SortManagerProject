@@ -1,4 +1,4 @@
-package com.spartaglobal.sortmanager.model;
+package com.dbernardo.sortmanager.model;
 
 public class MergeSortFactory extends SorterFactory {
     @Override
