@@ -1,7 +1,6 @@
 package com.dbernardo.sortmanager.controller;
 
 import com.dbernardo.sortmanager.model.*;
-import com.spartaglobal.sortmanager.model.*;
 import com.dbernardo.sortmanager.view.SorterView;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -82,7 +81,7 @@ public class SorterController {
     }
 
     public static void closeApplication(String message){
-        logger.info("User wishes to exit the application");
+        logger.info("User wishes to exit the application");    // Logs the user trying to exit the application
         System.out.println(message);
         System.exit(0);
     }

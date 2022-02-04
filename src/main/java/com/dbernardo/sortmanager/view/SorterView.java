@@ -23,7 +23,7 @@ public class SorterView {
 
         int[] sortedArray = sorter.sort(originalArray);    // Sorts the array
 
-        long stopTime = System.nanoTime();
+        long stopTime = System.nanoTime();    // Calculates the execution time for the specific sorting method
         logger.info(sorter.getClass().getSimpleName() + " took " + (stopTime - startTime) + " nano seconds to execute");
 
         System.out.print("\nSorted Array: ");

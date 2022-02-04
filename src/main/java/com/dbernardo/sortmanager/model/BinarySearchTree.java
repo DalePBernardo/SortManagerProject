@@ -16,9 +16,6 @@ public class BinarySearchTree implements Sorter {
 
     Node root;
 
-    public BinarySearchTree() {
-    }
-
     public int[] sort(int[] intArray, int size){
         return sort(intArray);
     }
@@ -64,7 +61,7 @@ public class BinarySearchTree implements Sorter {
     }
 
     public void inOrderTraversal(Node node, ArrayList<Integer> result){
-        // Traversing through the array, adding each node value to the array list
+        // Traversing through the array in-order, adding each node value to the array list
         if (node != null){
             inOrderTraversal(node.left, result);
             result.add(node.value);

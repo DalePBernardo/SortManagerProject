@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class BinarySearchTreeTest {
+
     private static BinarySearchTree sut;
 
     @BeforeAll
@@ -18,7 +19,7 @@ public class BinarySearchTreeTest {
 
     @Test
     @DisplayName("Given an array of x numbers, Binary Search Tree is expected to return the array sorted")
-    public void givenArrayOfxDifferentNumbers_BinarySearchTree_ReturnsTheArraySorted(){
+    public void givenArrayOfPositiveNumbers_BinarySearchTree_ReturnsTheArraySorted(){
         int[] testInput = {23, 12, 4, 93, 74};
         assertArrayEquals(new int[]{4,12,23,74,93}, sut.sort(testInput));
     }
