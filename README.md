@@ -1,12 +1,21 @@
 # Sort Manager Project
-## Summary
+
+## Table of Contents
+> - [Summary](##Summary)
+> - [Dependencies](##Dependencies)
+> - [How to Set up the Project](##How to set up the project)
+> - [How to Use the Project](##How to use the project)
+> - [Branches/Phases](##Branches/Phases)
+> - [Testing and Outcome](##Testing and Outcome)
+
+##Summary
 > A software which allows the user to choose between ***bubble sort,
 merge sort, and binary search tree*** to sort an array of integers which the 
 users can decide whether to randomise or insert each value. It utilised the ***MVC*** 
 and ***Factory design pattern*** to organise classes and packages. Finally, all 
 user activities are logged using the ***log4j2*** property.
 
-## Dependencies
+##Dependencies
 > - ***JUnit Dependency*** (For testing model classes)
 > - ***Log4j2 Dependency*** (For logging user activities)
 ```xml
@@ -24,7 +33,7 @@ user activities are logged using the ***log4j2*** property.
     </dependencies>
 ```
 
-## How to set up the project
+##How to set up the project
 > Download the code as a ZIP file and extract it on a directory of your choice 
 and open that folder using the IDE of your choice.
 
@@ -43,7 +52,7 @@ and click the refresh button.
 
 ![refresh](https://cdn.discordapp.com/attachments/881969703017386034/938893844383141938/unknown.png)
 
-## How to use the project
+##How to use the project
 > 1. Run the 'FactoryMain.java' class
 > 2. Insert the desired sorter to sort the array:
 'BubbleSort' | 'BS' for Bubble sort, 
@@ -57,7 +66,7 @@ and 'BinarySearchTree' | 'BST' for Binary search tree.
 Note: For all of the user inputs, the capitalisation of the letters does not matter.
 Users can also exit the application by entering 'Exit'.
 
-## Branches/Phases
+##Branches/Phases
 > - [Phase 1 - Implementation of bubble/merge sort with Test cases](https://github.com/DalePBernardo/SortManagerProject/tree/main/src/main/java/com/spartaglobal/sortmanager/model)
 > - [Phase 2 - Refactoring the project to follow the Design pattern of MVC and Factory](https://github.com/DalePBernardo/SortManagerProject/blob/main/src/main/java/com/spartaglobal/sortmanager/view/FactoryMain.java)
 > - [Phase 3 - Added logs of user activities in a log file](https://github.com/DalePBernardo/SortManagerProject/blob/main/src/main/java/com/spartaglobal/sortmanager/controller/SorterController.java)
@@ -66,7 +75,7 @@ Users can also exit the application by entering 'Exit'.
 >> Note: For phase 5, the implementation of Binary Search Tree has an adaptor sorting method
 >> in order to follow the way the other two sorting methods are called.
 
-## Testing and Outcome
+##Testing and Outcome
 > For all of the sorting methods, I tested the following conditions:
 >> - Given an array of negative numbers, sort method should return the sorted array
 >> - Given an array of zero numbers, sort method is expected to return an array of zeros with the same size
