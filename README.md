@@ -1,14 +1,14 @@
 # Sort Manager Project
 ## Summary
-> A software which allows the user to choose between bubble sort,
-merge sort, and binary search tree to sort an array of integers which the 
-users can decide whether to randomise or insert each value. It utilised the MVC 
-and Factory design pattern to organise classes and packages. Finally, all 
-user activities are logged using the log4j2 property.
+> A software which allows the user to choose between ***bubble sort,
+merge sort, and binary search tree*** to sort an array of integers which the 
+users can decide whether to randomise or insert each value. It utilised the ***MVC*** 
+and ***Factory design pattern*** to organise classes and packages. Finally, all 
+user activities are logged using the ***log4j2*** property.
 
 ## Dependencies
-> - JUnit Dependency (For testing model classes)
-> - Log4j2 Dependency (For logging user activities)
+> - ***JUnit Dependency*** (For testing model classes)
+> - ***Log4j2 Dependency*** (For logging user activities)
 ```xml
 <dependencies>
         <dependency>
@@ -30,7 +30,7 @@ and open that folder using the IDE of your choice.
 
 ![download](https://cdn.discordapp.com/attachments/881969703017386034/938889540482002944/unknown.png)
 
-> Once opened, go to 'pom.xml' file, right click and select generate
+> Once opened, go to ***'pom.xml'*** file, right click and select generate
 the following dependencies:
 
 ![generate](https://cdn.discordapp.com/attachments/881969703017386034/938890401828446308/unknown.png)
@@ -38,7 +38,7 @@ the following dependencies:
 ![jupiter](https://cdn.discordapp.com/attachments/881969703017386034/938892805844107305/unknown.png)
 ![log4j](https://cdn.discordapp.com/attachments/881969703017386034/938893331805663342/unknown.png)
 
-> As all of the dependencies has been added, open the maven view 
+> As all of the ***dependencies*** has been added, open the ***maven*** view 
 and click the refresh button.
 
 ![refresh](https://cdn.discordapp.com/attachments/881969703017386034/938893844383141938/unknown.png)
