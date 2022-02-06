@@ -29,6 +29,7 @@ public class SorterController {
             logger.info("User chose to insert the array");
 
             int sizeInput = view.getSize();    // Prompts the user to enter the size of the array
+
             int[] generatedArray = new int[sizeInput];
             logger.info("User has entered the size for the array");
 
@@ -38,8 +39,8 @@ public class SorterController {
             logger.info("User has inputted all of the values for the array");
 
             return generatedArray;
-        } else if (randomOrInsert.toLowerCase().equals("exit")){
-            closeApplication("\nClosing the application...");
+        } else if (randomOrInsert.toLowerCase().equals("exit") || randomOrInsert.toLowerCase().equals("quit")){
+            closeApplication();
         }
 
         logger.warn("User entered an invalid input when choosing randomise or insert the array");
@@ -48,41 +49,49 @@ public class SorterController {
     }
 
     public static Sorter getSorter (String sorterType) {
-        SorterFactory sf = null;
-        SorterView sv = new SorterView();
+        SorterFactory sorterFactory = null;
+        SorterView view = new SorterView();
 
         switch (sorterType.toLowerCase()) {    // Check which one the user has entered
             case "bubblesort", "bs" -> {
                 logger.info("User chose Bubble sort to sort the array");
-                sf = new BubbleSortFactory();
+                sorterFactory = new BubbleSortFactory();
             }
             case "mergesort", "ms" -> {
                 logger.info("User chose Merge sort to sort the array");
-                sf = new MergeSortFactory();
+                sorterFactory = new MergeSortFactory();
             }
             case "binarysearchtree", "bst" -> {
                 logger.info("User chose Binary tree sort to sort the array");
-                sf = new BinarySearchTreeFactory();
+                sorterFactory = new BinarySearchTreeFactory();
             }
-            case "exit" ->
-                closeApplication("\nClosing the application...");
+            case "exit", "quit" ->
+                closeApplication();
             default -> {
                 logger.warn("User entered an invalid input when choosing the sorter");
-                sf = null;
+                sorterFactory = null;
             }
         }
 
-        if (sf == null){    // Will ask the user to insert another input if it did not match with any of the options
-            String desiredSorter = sv.promptUserInput("\nSorter input not valid, please try again: ");
+        if (sorterFactory == null){    // Will ask the user to insert another input if it did not match with any of the options
+            String desiredSorter = view.promptUserInput("\nSorter input not valid, please try again: ");
             return getSorter(desiredSorter);
         }
 
-        return sf.getInstance();
+        return sorterFactory.getInstance();
     }
 
-    public static void closeApplication(String message){
+    public void userTryAgain(){
+        SorterView view = new SorterView();
+        String tryAgain = view.promptUserInput("\nWould you like to try again? 'No' to exit, anything else to continue: ");
+
+        if (tryAgain.toLowerCase().equals("no") || tryAgain.toLowerCase().equals("exit") || tryAgain.toLowerCase().equals("quit"))
+            closeApplication();
+    }
+
+    public static void closeApplication(){
         logger.info("User wishes to exit the application");    // Logs the user trying to exit the application
-        System.out.println(message);
+        System.out.println("\nClosing the application...");
         System.exit(0);
     }
 }
